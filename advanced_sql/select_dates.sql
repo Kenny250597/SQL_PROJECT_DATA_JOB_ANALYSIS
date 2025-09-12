@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 
 
 SELECT
@@ -37,3 +38,44 @@ ORDER BY
 
 
 
+=======
+/* 
+
+SELECT
+    '2023-02-09' :: DATE,
+    '123' :: INTEGER,
+    'true' :: BOOLEAN,
+    '3.14' :: REAL;
+
+*/
+
+
+SELECT 
+    job_title_short AS title,
+    job_location AS location,
+    job_posted_date AT TIME ZONE 'UTC' AT TIME ZONE 'EST' AS date_time,
+    EXTRACT(MONTH FROM job_posted_date) AS date_month,
+    EXTRACT(YEAR FROM job_posted_date) AS date_year
+FROM job_postings_fact
+
+LIMIT 10;
+
+
+SELECT
+    COUNT(job_id) AS job_count,
+    EXTRACT(MONTH FROM job_posted_date) AS month_date
+    
+FROM job_postings_fact
+
+WHERE
+    job_title_short = 'Data Analyst'
+
+GROUP BY month_date
+
+ORDER BY
+    job_count DESC
+
+
+
+
+>>>>>>> e4a4cfa1904489e32fb6eaa783f986538b47a5d8
