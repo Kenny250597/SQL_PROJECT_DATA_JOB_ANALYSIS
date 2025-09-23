@@ -1,11 +1,6 @@
 /*
 
-QUERY 2
-- top paying jobs for my role
-- skills required for these roles
-- most in-demand skills for my role
-- top skills based on salary for my role
-- most optimal skills to learn (high demand and high paying)
+QUERY 2 - skills required for these roles
 
 */
 
